@@ -1,4 +1,5 @@
 import React from "react";
+//Icons
 import {
   RiHome6Line,
   RiPercentLine,
@@ -10,11 +11,11 @@ import {
   RiRestaurantLine,
 } from "react-icons/ri";
 
-const Sidebar = (props) => {
-  const { showMenu } = props;
-
+const Sidebar = ({ showMenu }) => {
   return (
-    <div className="bg-[#1F1D2B] fixed lg:left-0 top-0 w-28 h-full flex flex-col justify-between py-5 rounded-tr-2xl rounded-br-2xl z-50 -left-full">
+    <div
+      className={`bg-[#1F1D2B] fixed lg:left-0 top-0 w-28 h-full flex flex-col justify-between py-5 rounded-tr-2xl rounded-br-2xl z-50 transition-all ${showMenu ? "left-0" : "-left-full"}`}
+    >
       <div>
         <ul className="px-4">
           <li className="logo">
